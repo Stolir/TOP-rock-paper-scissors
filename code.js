@@ -19,7 +19,7 @@ function humanChoice() {
         return humanSelection
     }
     else {
-        alert("Please enter one of the following choices: Rock, Paper, Scissors.")
+        alert(`${humanSelection} is not a valid option!\nPlease enter one of the following options: Rock, Paper, Scissors`)
     }
 
 }

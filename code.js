@@ -84,3 +84,21 @@ function playRound(humanSelection, cpuSelection) {
 
 // -------------------------------------------------------------------------------------------------------------------------------- //
 // write playGame() which will call playRound() 5 times keep track of the player's scores and returning the winner of the game at the end
+function playGame() {
+
+    for (let i = 0; i < 5; i++) {
+        playRound()
+    }
+
+    if (humanScore > cpuScore) {
+        alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nYou Win!`)
+    }
+    else if (humanScore === cpuScore) {
+        alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nIt's a Tie!`)
+    }
+    else {
+        alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nYou Lose!`)
+    }
+}
+
+playGame()

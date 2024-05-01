@@ -14,7 +14,7 @@ function computerChoice() {
 function humanChoice() {
     humanSelection = prompt("Choose your play!");
     humanSelection = humanSelection.toLowerCase();
-    if (humanSelection == rock || humanSelection == paper || humanSelection == scissors) {
+    if (humanSelection === "rock" || humanSelection === "paper" || humanSelection === "scissors") {
         console.log(humanSelection)
         return humanSelection
     }

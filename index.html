@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="code.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    
+    <div class="flexcolumn" id="titlecard">
+        <div id="gametitle">ROCK PAPER SCISSORS</div>
+        <div class="flexcolumn" id="card"> 
+            <div class="extragap" id="score">0 - 0</div>
+            <div id="playertext">Choose your play</div>
+            <div class="extragap flexrow" id="choicebuttons">
+                <button class="playerchoice button-74">ROCK</button>
+                <button class="playerchoice button-74">PAPER</button>
+                <button class="playerchoice button-74">SCISSORS</button>
+            </div>
+            <div class="extragap" id="cputext">CPU is scheming... </div>
+            <div class="extragap" id="roundwinner">Waiting for players...</div>
+        </div>
+    </div>
 </body>
 </html>

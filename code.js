@@ -86,5 +86,3 @@ function playGame() {
         alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nYou Lose!`)
     }
 }
-
-playGame()

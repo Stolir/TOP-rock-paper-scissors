@@ -44,6 +44,7 @@ body {
     border: 5px solid #422800;
     gap: 5px;
     padding: 30px;
+    width: 600px;
 }
 
 #gametitle, #score {
@@ -82,13 +83,15 @@ body {
   touch-action: manipulation;
 }
 
-.button-74:hover {
-  background-color: #fff;
-}
-
 .button-74:active {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
+  background-color: #fff;
+}
+
+.button-74:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 @media (min-width: 768px) {

@@ -11,7 +11,13 @@ let atext = ""
 
 const restartBtn = document.querySelector("#restart")
 restartBtn.addEventListener("click", () => {
-    console.log("clicked")
+    humanScore = 0;
+    cpuScore = 0;
+    restartBtn.disabled = true;
+    choiceBtns.forEach((button) => {
+        button.disabled = false;
+    })
+    score.textContent = `${humanScore} - ${cpuScore}`
 })
 
 const choiceBtns = document.querySelectorAll(".playerchoice") 
@@ -81,22 +87,17 @@ function playRound(humanChoice, cpuChoice) {
         resetGame()
     }
 }
-// write playGame() which will call playRound() 5 times keep track of the player's scores and returning the winner of the game at the end
-function playGame() {
 
-    for (let i = 0; i < 5; i++) {
-        playRound()
-    }
-
+// write resetGame() which resets score to 0-0 and starts a new game
+function resetGame() {
     if (humanScore > cpuScore) {
-        alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nYou Win!`)
-    }
-    else if (humanScore === cpuScore) {
-        alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nIt's a Tie!`)
+        announcement.textContent = "You win!\n Looks like AI won't be taking over anything... for now..."
     }
     else {
-        alert(`Player: ${humanScore}\nCPU: ${cpuScore}\nYou Lose!`)
+        announcement.textContent = "You lose!\n AI will now take over your house."
     }
+    choiceBtns.forEach((button) => {
+        button.disabled = true;
+    })
+    restartBtn.disabled = false;
 }
-
-// Add resetGame()

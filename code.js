@@ -5,9 +5,6 @@ function computerChoice() {
     let cpuSelection = choices[Math.floor(Math.random() * choices.length)];  
     return cpuSelection; 
 }
-
-
-// -------------------------------------------------------------------------------------------------------------------------------- //
 // Write humanChoice() which will prompt the user for their choice, make sure the value is case-insensitive and return it
 
 function humanChoice() {
@@ -22,21 +19,12 @@ function humanChoice() {
     }
 
 }
-
-
-// -------------------------------------------------------------------------------------------------------------------------------- //
 // Keep player's scores in a variable that increments based on the winner every round
 
 let humanScore = 0;
 let cpuScore = 0; 
-
-
-
-// -------------------------------------------------------------------------------------------------------------------------------- //
-
 // Write playRound() which takes the values from humanChoice and computerChoice as parameters and evaluate the winner of the round thus incrementing
 // score variable by 1
-
 function playRound(humanSelection, cpuSelection) {
 
     cpuSelection = computerChoice()
@@ -81,8 +69,6 @@ function playRound(humanSelection, cpuSelection) {
         }
     }
 }
-
-// -------------------------------------------------------------------------------------------------------------------------------- //
 // write playGame() which will call playRound() 5 times keep track of the player's scores and returning the winner of the game at the end
 function playGame() {
 
